@@ -9,7 +9,8 @@
     * { box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
     body {
       margin: 0;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      background: url('https://i.postimg.cc/fbTLVXvp/BGLogin.png') no-repeat center center fixed;
+      background-size: cover;
       color: #fff;
       display: flex;
       flex-direction: column;
@@ -19,7 +20,7 @@
       position: relative;
     }
     .container {
-      background: #1e2a38;
+      background: rgba(30, 42, 56, 0.85);
       padding: 2rem;
       border-radius: 12px;
       box-shadow: 0 0 20px rgba(0,0,0,0.3);
@@ -96,26 +97,4 @@
   <script>
     const client = window.supabase.createClient(
       'https://ddxscnalvhuresqpdows.supabase.co',
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRkeHNjbmFsdmh1cmVzcXBkb3dzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA1MzY5MjksImV4cCI6MjA3NjExMjkyOX0.1ixT38jQN36PV2-R68DmBAx8fRZzeY9Nw5kzsc3fZzY'
-    );
-
-    const form = document.getElementById('register-form');
-    const message = document.getElementById('message');
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
-
-      const { error } = await client.auth.signUp({ email, password });
-
-      if (error) {
-        message.textContent = 'Registration failed: ' + error.message;
-      } else {
-        message.textContent = 'Logged in successfully!';
-        setTimeout(() => window.location.href = 'CHANGETHIS.html', 1500);
-      }
-    });
-  </script>
-</body>
-</html>
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRkeHNjbmFsdmh1cmVzcXBkb3dzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA1MzY5MjksImV4cCI6MjA3NjExMjkyOX0.1ixT38jQN36PV
